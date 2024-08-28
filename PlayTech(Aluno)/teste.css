@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+    position: relative; /* Adicionamos esta propriedade para definir 
+    o contexto de posicionamento */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover {
+    color: #f0f0f0;
+}
+
+/* Estilizando o menu dropdown */
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Posiciona o submenu à direita 
+    do item de menu pai */
+    background-color: #444;
+    padding: 10px 30px;  
+}
+
+.dropdown:hover .submenu {
+    top: 250px;
+    display: block;
+    background: blue;
+}
+
+.submenu li {
+    margin-bottom: 5px;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CSS/professor.css">
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- JavaScript Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/Imagens/Squirrel Logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Nome: Professor</span>
+                    <span class="profession">Nome da Disciplina</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="seach-box">
+                    <i class='bx bx-search-alt icon'></i>
+                    <input type="text" placeholder="Pesquise aqui....">
+                </li>
+
+                <ul class="menu-link">
+                    <li class="nav-link">
+                        <a href="/Conta.html"><i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Minha Conta</span></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/index.html"><i class='bx bx-objects-vertical-bottom icon'></i>
+                            <span class="text nav-text">Dashboard</span></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href=""><i class='bx bxs-school icon'></i>
+                            <span class="text nav-text">Disciplinas e Turmas
+                            </span></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" id="btnAbrirIframe" onclick="abrirIframe()"><i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Calendário Acadêmico
+                            </span></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href=""><i class='bx bx-file-find icon'></i>
+                            <span class="text nav-text">Notas e Avaliações
+                            </span></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href=""><i class='bx bx-time-five icon'></i>
+                            <span class="text nav-text">Horário de Aulas
+                            </span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li>
+                    <a href=""><i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text" style="font-size: 34px;">Dashboard</div>
+        
+        <!-- Calendário -->
+        <div id="iframeContainer"></div> 
+
+    </section>
+
+    <script src="/JS/professor.js"></script>
+    <script src="/JS/CalendarioProfessor.js"></script>
+
+</body>
+
+</html>

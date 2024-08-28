@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Minha Barra Lateral</h2>
+        <ul class="menu">
+            <li><a href="#">Página Inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aulas</a>
+                <ul class="submenu">
+                    <li>Matemática</li>
+                    <li>Língua Portuguesa</li>
+                    <li>Ciências</li>
+                    <li>História</li>
+                    <li>Geografia</li>
+                    <li>Arte</li>
+                    <li>Ensino Religioso</li>
+                    <li>Língua Inglesa</li>
+                    <li>Educação Fisica</li>
+                </ul>
+            </li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <h1>Exemplo de âncora para abrir e fechar o iframe</h1>
+    <a href="#" id="btnAbrirIframe" onclick="abrirIframe()">Abrir PDF</a>
+    <div id="iframeContainer"></div>
+
+    <script>
+        var iframeContainer = document.getElementById("iframeContainer");
+
+        // Função para abrir o iframe quando a âncora é clicada
+        function abrirIframe() {
+            iframeContainer.innerHTML = '<iframe src="/Pdf/Calendario-Academico-2023---rev.-2023-01-30.pdf" width="800" height="600"></iframe>';
+            var btnAbrirIframe = document.getElementById("btnAbrirIframe");
+            btnAbrirIframe.onclick = fecharIframe;
+        }
+
+        // Função para fechar o iframe quando a âncora é clicada
+        function fecharIframe() {
+            iframeContainer.innerHTML = '';
+            var btnAbrirIframe = document.getElementById("btnAbrirIframe");
+            btnAbrirIframe.onclick = abrirIframe;
+        }
+    </script>
+
+</body>
+
+</html>
